@@ -1,0 +1,52 @@
+{
+  "name": "@asl-19/use-overflow-state",
+  "version": "0.0.0",
+  "description": "Hook that returns the overflow state of the provided scrollable element",
+  "author": {
+    "name": "Grant Heaslip",
+    "email": "grant@asl19.org",
+    "url": "https://asl19.org/"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": "ASL-19/use-overflow-state",
+  "engines": {
+    "node": ">= 14"
+  },
+  "files": [
+    "dist/**/*.js",
+    "types/**/*.d.ts"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "types/use-overflow-state.public.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "api-extractor:check": "api-extractor run --verbose",
+    "api-extractor:update": "api-extractor run --local --verbose",
+    "api-documenter:update": "api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
+    "build": "tsc -p tsconfig-cjs.json && tsc -p tsconfig-esm.json",
+    "build-and-update-api": "yarn build && yarn api-extractor:update && yarn api-documenter:update",
+    "eslint": "eslint . --ext js,ts",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "detect-passive-events": "^2.0.1",
+    "normalize-scroll-left": "^0.2.1"
+  },
+  "devDependencies": {
+    "@asl-19/eslint-config": "^0.3.0",
+    "@microsoft/api-documenter": "^7.9.26",
+    "@microsoft/api-extractor": "^7.11.2",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "eslint": "^7.13.0",
+    "prettier": "^2.1.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.0.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}

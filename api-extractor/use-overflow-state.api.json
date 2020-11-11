@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.11.2",
+    "schemaVersion": 1003,
+    "oldestForwardsCompatibleVersion": 1001
+  },
+  "kind": "Package",
+  "canonicalReference": "@asl-19/use-overflow-state!",
+  "docComment": "",
+  "name": "@asl-19/use-overflow-state",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@asl-19/use-overflow-state!",
+      "name": "",
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@asl-19/use-overflow-state!OverflowState:interface",
+          "docComment": "/**\n * useOverflowState hook return value\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OverflowState "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "OverflowState",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@asl-19/use-overflow-state!OverflowState#horizontalScrollBarHasGutter:member",
+              "docComment": "/**\n * Does the horizontal scroll bar have a gutter (reserved space)?\n *\n * @remarks\n *\n * Overlay scroll bars will never have a gutter; classic scroll bars will have a gutter if the scrollable element has overflow.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "horizontalScrollBarHasGutter: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "horizontalScrollBarHasGutter",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@asl-19/use-overflow-state!OverflowState#leftHasOverflow:member",
+              "docComment": "/**\n * Is there overflow on the left side?\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "leftHasOverflow: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "leftHasOverflow",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@asl-19/use-overflow-state!OverflowState#rightHasOverflow:member",
+              "docComment": "/**\n * Is there overflow on the right side?\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "rightHasOverflow: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "rightHasOverflow",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@asl-19/use-overflow-state!useOverflowState:var",
+          "docComment": "/**\n * Hook that returns the overflow state of the provided scrollable element (arguments: {@link UseOverflowStateArgs})\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "useOverflowState: "
+            },
+            {
+              "kind": "Content",
+              "text": "({ scrollableElementRef, wrapperElementRef, }: "
+            },
+            {
+              "kind": "Reference",
+              "text": "UseOverflowStateArgs",
+              "canonicalReference": "@asl-19/use-overflow-state!UseOverflowStateArgs:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "OverflowState",
+              "canonicalReference": "@asl-19/use-overflow-state!OverflowState:interface"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "useOverflowState",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@asl-19/use-overflow-state!UseOverflowStateArgs:interface",
+          "docComment": "/**\n * useOverflowState hook arguments\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface UseOverflowStateArgs "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "UseOverflowStateArgs",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@asl-19/use-overflow-state!UseOverflowStateArgs#scrollableElementRef:member",
+              "docComment": "/**\n * Ref for the scrollable element (must have `overflow-x: auto` or `overflow-x: visible`).\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "scrollableElementRef: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RefObject",
+                  "canonicalReference": "@types/react!~React.RefObject:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HTMLElement",
+                  "canonicalReference": "!HTMLElement:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "scrollableElementRef",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@asl-19/use-overflow-state!UseOverflowStateArgs#wrapperElementRef:member",
+              "docComment": "/**\n * Ref for the wrapper element (used to determine if scroll bar is inset).\n *\n * @remarks\n *\n * You’ll probably want to apply the overflow indicator styles to this element.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "wrapperElementRef: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RefObject",
+                  "canonicalReference": "@types/react!~React.RefObject:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HTMLElement",
+                  "canonicalReference": "!HTMLElement:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "> | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "wrapperElementRef",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}

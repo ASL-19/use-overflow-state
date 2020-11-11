@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "noImplicitAny": true,
+    "outDir": "dist/cjs",
+    "target": "ES5"
+  },
+  "include": [
+    "src/**/*",
+    "*.js"
+  ],
+}
