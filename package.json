@@ -10,7 +10,7 @@
   "license": "GPL-3.0-or-later",
   "repository": "ASL-19/use-overflow-state",
   "engines": {
-    "node": ">= 14"
+    "node": ">= 12"
   },
   "files": [
     "dist/**/*.js",
