@@ -15,4 +15,3 @@ horizontalScrollBarHasGutter: boolean;
 ## Remarks
 
 Overlay scroll bars will never have a gutter; classic scroll bars will have a gutter if the scrollable element has overflow.
-

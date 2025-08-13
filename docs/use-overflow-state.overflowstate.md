@@ -9,7 +9,7 @@ useOverflowState hook return value
 **Signature:**
 
 ```typescript
-export interface OverflowState 
+export interface OverflowState
 ```
 
 ## Properties
@@ -18,79 +18,62 @@ export interface OverflowState
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [horizontalScrollBarHasGutter](./use-overflow-state.overflowstate.horizontalscrollbarhasgutter.md)
 
-
 </td><td>
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
 Does the horizontal scroll bar have a gutter (reserved space)?
-
 
 </td></tr>
 <tr><td>
 
 [leftHasOverflow](./use-overflow-state.overflowstate.lefthasoverflow.md)
 
-
 </td><td>
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
 Is there overflow on the left side?
-
 
 </td></tr>
 <tr><td>
 
 [rightHasOverflow](./use-overflow-state.overflowstate.righthasoverflow.md)
 
-
 </td><td>
-
 
 </td><td>
 
 boolean
 
-
 </td><td>
 
 Is there overflow on the right side?
 
-
 </td></tr>
 </tbody></table>
-

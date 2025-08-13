@@ -9,7 +9,7 @@ useOverflowState hook arguments
 **Signature:**
 
 ```typescript
-export interface UseOverflowStateArgs 
+export interface UseOverflowStateArgs
 ```
 
 ## Properties
@@ -18,60 +18,47 @@ export interface UseOverflowStateArgs
 
 Property
 
-
 </th><th>
 
 Modifiers
-
 
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [scrollableElementRef](./use-overflow-state.useoverflowstateargs.scrollableelementref.md)
 
-
 </td><td>
-
 
 </td><td>
 
 RefObject&lt;HTMLElement&gt;
 
-
 </td><td>
 
 Ref for the scrollable element (must have `overflow-x: auto` or `overflow-x: visible`<!-- -->).
-
 
 </td></tr>
 <tr><td>
 
 [wrapperElementRef](./use-overflow-state.useoverflowstateargs.wrapperelementref.md)
 
-
 </td><td>
-
 
 </td><td>
 
 RefObject&lt;HTMLElement&gt; \| undefined
 
-
 </td><td>
 
 Ref for the wrapper element (used to determine if scroll bar is inset).
 
-
 </td></tr>
 </tbody></table>
-

@@ -7,21 +7,22 @@
 import { RefObject } from 'react';
 
 // @public
-export interface OverflowState {
+export type OverflowState = {
     horizontalScrollBarHasGutter: boolean;
     leftHasOverflow: boolean;
     rightHasOverflow: boolean;
-}
+};
 
 // @public
-const useOverflowState: ({ scrollableElementRef, wrapperElementRef, }: UseOverflowStateArgs) => OverflowState;
+const useOverflowState: ({ roundingErrorTolerance, scrollableElementRef, wrapperElementRef, }: UseOverflowStateArgs) => OverflowState;
 export default useOverflowState;
 
 // @public
-export interface UseOverflowStateArgs {
-    scrollableElementRef: RefObject<HTMLElement>;
-    wrapperElementRef: RefObject<HTMLElement> | undefined;
-}
+export type UseOverflowStateArgs = {
+    roundingErrorTolerance?: number;
+    scrollableElementRef: RefObject<HTMLElement | null>;
+    wrapperElementRef: RefObject<HTMLElement | null>;
+};
 
 // (No @packageDocumentation comment for this package)
 

@@ -15,4 +15,3 @@ wrapperElementRef: RefObject<HTMLElement> | undefined;
 ## Remarks
 
 You’ll probably want to apply the overflow indicator styles to this element.
-

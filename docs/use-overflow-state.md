@@ -10,22 +10,18 @@
 
 Function
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [useOverflowState({ scrollableElementRef, wrapperElementRef, })](./use-overflow-state.useoverflowstate.md)
 
-
 </td><td>
 
 Hook that returns the overflow state of the provided scrollable element (arguments: [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)<!-- -->)
-
 
 </td></tr>
 </tbody></table>
@@ -36,34 +32,27 @@ Hook that returns the overflow state of the provided scrollable element (argumen
 
 Interface
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 [OverflowState](./use-overflow-state.overflowstate.md)
 
-
 </td><td>
 
 useOverflowState hook return value
-
 
 </td></tr>
 <tr><td>
 
 [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)
 
-
 </td><td>
 
 useOverflowState hook arguments
 
-
 </td></tr>
 </tbody></table>
-

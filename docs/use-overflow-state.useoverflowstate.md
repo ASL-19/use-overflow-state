@@ -9,7 +9,10 @@ Hook that returns the overflow state of the provided scrollable element (argumen
 **Signature:**
 
 ```typescript
-useOverflowState: ({ scrollableElementRef, wrapperElementRef, }: UseOverflowStateArgs) => OverflowState
+useOverflowState: ({
+  scrollableElementRef,
+  wrapperElementRef,
+}: UseOverflowStateArgs) => OverflowState;
 ```
 
 ## Parameters
@@ -18,30 +21,24 @@ useOverflowState: ({ scrollableElementRef, wrapperElementRef, }: UseOverflowStat
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 { scrollableElementRef, wrapperElementRef, }
 
-
 </td><td>
 
 [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
@@ -49,4 +46,3 @@ Description
 **Returns:**
 
 [OverflowState](./use-overflow-state.overflowstate.md)
-
