@@ -2,12 +2,51 @@
 
 [Home](./index.md) &gt; [@asl-19/use-overflow-state](./use-overflow-state.md) &gt; [useOverflowState](./use-overflow-state.useoverflowstate.md)
 
-## useOverflowState variable
+## useOverflowState() function
 
 Hook that returns the overflow state of the provided scrollable element (arguments: [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)<!-- -->)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 useOverflowState: ({ scrollableElementRef, wrapperElementRef, }: UseOverflowStateArgs) => OverflowState
 ```
+
+## Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+{ scrollableElementRef, wrapperElementRef, }
+
+
+</td><td>
+
+[UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+**Returns:**
+
+[OverflowState](./use-overflow-state.overflowstate.md)
+

@@ -6,7 +6,7 @@
 
 Does the horizontal scroll bar have a gutter (reserved space)?
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 horizontalScrollBarHasGutter: boolean;

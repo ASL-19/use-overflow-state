@@ -1,19 +1,176 @@
 {
   "metadata": {
     "toolPackage": "@microsoft/api-extractor",
-    "toolVersion": "7.11.2",
-    "schemaVersion": 1003,
-    "oldestForwardsCompatibleVersion": 1001
+    "toolVersion": "7.52.10",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
   },
   "kind": "Package",
   "canonicalReference": "@asl-19/use-overflow-state!",
   "docComment": "",
   "name": "@asl-19/use-overflow-state",
+  "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
       "canonicalReference": "@asl-19/use-overflow-state!",
       "name": "",
+      "preserveMemberOrder": false,
       "members": [
         {
           "kind": "Interface",
@@ -25,8 +182,10 @@
               "text": "export interface OverflowState "
             }
           ],
+          "fileUrlPath": "src/index.ts",
           "releaseTag": "Public",
           "name": "OverflowState",
+          "preserveMemberOrder": false,
           "members": [
             {
               "kind": "PropertySignature",
@@ -46,6 +205,8 @@
                   "text": ";"
                 }
               ],
+              "isReadonly": false,
+              "isOptional": false,
               "releaseTag": "Public",
               "name": "horizontalScrollBarHasGutter",
               "propertyTypeTokenRange": {
@@ -71,6 +232,8 @@
                   "text": ";"
                 }
               ],
+              "isReadonly": false,
+              "isOptional": false,
               "releaseTag": "Public",
               "name": "leftHasOverflow",
               "propertyTypeTokenRange": {
@@ -96,6 +259,8 @@
                   "text": ";"
                 }
               ],
+              "isReadonly": false,
+              "isOptional": false,
               "releaseTag": "Public",
               "name": "rightHasOverflow",
               "propertyTypeTokenRange": {
@@ -107,17 +272,13 @@
           "extendsTokenRanges": []
         },
         {
-          "kind": "Variable",
-          "canonicalReference": "@asl-19/use-overflow-state!useOverflowState:var",
+          "kind": "Function",
+          "canonicalReference": "@asl-19/use-overflow-state!useOverflowState:function(1)",
           "docComment": "/**\n * Hook that returns the overflow state of the provided scrollable element (arguments: {@link UseOverflowStateArgs})\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "useOverflowState: "
-            },
-            {
-              "kind": "Content",
-              "text": "({ scrollableElementRef, wrapperElementRef, }: "
+              "text": "useOverflowState: ({ scrollableElementRef, wrapperElementRef, }: "
             },
             {
               "kind": "Reference",
@@ -134,12 +295,24 @@
               "canonicalReference": "@asl-19/use-overflow-state!OverflowState:interface"
             }
           ],
+          "fileUrlPath": "src/index.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
           "releaseTag": "Public",
-          "name": "useOverflowState",
-          "variableTypeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 5
-          }
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "{ scrollableElementRef, wrapperElementRef, }",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "useOverflowState"
         },
         {
           "kind": "Interface",
@@ -151,8 +324,10 @@
               "text": "export interface UseOverflowStateArgs "
             }
           ],
+          "fileUrlPath": "src/index.ts",
           "releaseTag": "Public",
           "name": "UseOverflowStateArgs",
+          "preserveMemberOrder": false,
           "members": [
             {
               "kind": "PropertySignature",
@@ -166,7 +341,7 @@
                 {
                   "kind": "Reference",
                   "text": "RefObject",
-                  "canonicalReference": "@types/react!~React.RefObject:interface"
+                  "canonicalReference": "@types/react!React.RefObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -186,6 +361,8 @@
                   "text": ";"
                 }
               ],
+              "isReadonly": false,
+              "isOptional": false,
               "releaseTag": "Public",
               "name": "scrollableElementRef",
               "propertyTypeTokenRange": {
@@ -205,7 +382,7 @@
                 {
                   "kind": "Reference",
                   "text": "RefObject",
-                  "canonicalReference": "@types/react!~React.RefObject:interface"
+                  "canonicalReference": "@types/react!React.RefObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -225,6 +402,8 @@
                   "text": ";"
                 }
               ],
+              "isReadonly": false,
+              "isOptional": false,
               "releaseTag": "Public",
               "name": "wrapperElementRef",
               "propertyTypeTokenRange": {

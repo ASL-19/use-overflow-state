@@ -1,8 +1,10 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "@asl-19/shared-package-configs/tsconfig-esm.json",
   "compilerOptions": {
-    "module": "ES2015",
-    "outDir": "dist/esm",
-    "target": "ES2019"
-  }
+    "outDir": "dist",
+    "moduleResolution": "Bundler"
+  },
+  "include": [
+    "src/**/*.ts*"
+  ]
 }

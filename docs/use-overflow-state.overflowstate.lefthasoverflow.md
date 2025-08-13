@@ -6,7 +6,7 @@
 
 Is there overflow on the left side?
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 leftHasOverflow: boolean;

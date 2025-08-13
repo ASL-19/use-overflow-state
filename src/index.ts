@@ -6,14 +6,12 @@ import { RefObject, useEffect, useRef, useState } from "react";
 // === Types ===
 // =============
 
-type DocumentDir = "ltr" | "rtl";
-
 /**
  * useOverflowState hook return value
  *
  * @public
  */
-export interface OverflowState {
+export type OverflowState = {
   /**
    * Does the horizontal scroll bar have a gutter (reserved space)?
    *
@@ -32,19 +30,30 @@ export interface OverflowState {
    * Is there overflow on the right side?
    */
   rightHasOverflow: boolean;
-}
+};
 
 /**
  * useOverflowState hook arguments
  *
  * @public
  */
-export interface UseOverflowStateArgs {
+export type UseOverflowStateArgs = {
+  /**
+   * Number of pixels of tolerance to account for rounding errors in
+   * `hasOverflow` calculations.
+   *
+   * @remarks
+   * Set to `2` by default since we’ve observed subpixel `normalizedScrollLeft`
+   * values greater than `1` (e.g. `1.047607421875`) when scrolled to the edge of
+   * a container in Chrome on Android.
+   */
+  roundingErrorTolerance?: number;
+
   /**
    * Ref for the scrollable element (must have `overflow-x: auto` or
    * `overflow-x: visible`).
    */
-  scrollableElementRef: RefObject<HTMLElement>;
+  scrollableElementRef: RefObject<HTMLElement | null>;
 
   /**
    * Ref for the wrapper element (used to determine if scroll bar is inset).
@@ -53,8 +62,10 @@ export interface UseOverflowStateArgs {
    * You’ll probably want to apply the overflow indicator styles to this
    * element.
    */
-  wrapperElementRef: RefObject<HTMLElement> | undefined;
-}
+  wrapperElementRef: RefObject<HTMLElement | null>;
+};
+
+type DocumentDir = "ltr" | "rtl";
 
 // =================
 // === Constants ===
@@ -79,13 +90,14 @@ const scrollPositionUpdateFrequency = 125;
  * @public
  */
 const useOverflowState = ({
+  roundingErrorTolerance = 2,
   scrollableElementRef,
   wrapperElementRef,
 }: UseOverflowStateArgs): OverflowState => {
   const [overflowState, setOverflowState] = useState<OverflowState>({
+    horizontalScrollBarHasGutter: false,
     leftHasOverflow: false,
     rightHasOverflow: false,
-    horizontalScrollBarHasGutter: false,
   });
 
   const updateScrollStateTimeoutIdRef = useRef<number>(0);
@@ -93,7 +105,7 @@ const useOverflowState = ({
 
   useEffect(() => {
     const documentDir: DocumentDir = document.documentElement.getAttribute(
-      "dir"
+      "dir",
     ) as DocumentDir;
 
     const wrapperElement = wrapperElementRef.current;
@@ -106,34 +118,38 @@ const useOverflowState = ({
 
       const normalizedScrollLeft = getNormalizedScrollLeft(
         scrollableElement,
-        documentDir
+        documentDir,
       );
 
-      const leftHasOverflow = normalizedScrollLeft > 0;
+      const leftHasOverflow = normalizedScrollLeft > roundingErrorTolerance;
+
       const rightHasOverflow =
         // Math.ceil necessary because scrollLeft can be a decimal
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
-        Math.ceil(normalizedScrollLeft) + scrollableElement.offsetWidth <
+        normalizedScrollLeft +
+          scrollableElement.offsetWidth +
+          roundingErrorTolerance <
         scrollableElement.scrollWidth;
 
       const scrollBarIsInset =
         wrapperElement.clientHeight > scrollableElement.clientHeight;
 
       const newOverflowState: OverflowState = {
+        horizontalScrollBarHasGutter: scrollBarIsInset,
         leftHasOverflow,
         rightHasOverflow,
-        horizontalScrollBarHasGutter: scrollBarIsInset,
       };
 
       if (
         overflowStateKeys.some(
-          (key) => overflowState[key] !== newOverflowState[key]
+          // eslint-disable-next-line security/detect-object-injection
+          (key) => overflowState[key] !== newOverflowState[key],
         )
       ) {
         setOverflowState({
+          horizontalScrollBarHasGutter: scrollBarIsInset,
           leftHasOverflow,
           rightHasOverflow,
-          horizontalScrollBarHasGutter: scrollBarIsInset,
         });
       }
     };
@@ -149,7 +165,7 @@ const useOverflowState = ({
       ) {
         updateScrollStateTimeoutIdRef.current = window.setTimeout(
           updateOverflowState,
-          scrollPositionUpdateFrequency
+          scrollPositionUpdateFrequency,
         );
 
         return;
@@ -166,7 +182,7 @@ const useOverflowState = ({
       scrollableElement.addEventListener(
         "scroll",
         debouncedUpdateOverflowState,
-        supportsPassiveEvents ? { passive: true } : false
+        supportsPassiveEvents ? { passive: true } : false,
       );
     }
 
@@ -177,13 +193,18 @@ const useOverflowState = ({
         scrollableElement.removeEventListener(
           "scroll",
           debouncedUpdateOverflowState,
-          false
+          false,
         );
       }
 
       window.removeEventListener("resize", debouncedUpdateOverflowState, false);
     };
-  }, [overflowState, scrollableElementRef, wrapperElementRef]);
+  }, [
+    overflowState,
+    roundingErrorTolerance,
+    scrollableElementRef,
+    wrapperElementRef,
+  ]);
 
   return overflowState;
 };

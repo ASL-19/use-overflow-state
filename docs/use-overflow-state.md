@@ -4,16 +4,66 @@
 
 ## use-overflow-state package
 
+## Functions
+
+<table><thead><tr><th>
+
+Function
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[useOverflowState({ scrollableElementRef, wrapperElementRef, })](./use-overflow-state.useoverflowstate.md)
+
+
+</td><td>
+
+Hook that returns the overflow state of the provided scrollable element (arguments: [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)<!-- -->)
+
+
+</td></tr>
+</tbody></table>
+
 ## Interfaces
 
-|  Interface | Description |
-|  --- | --- |
-|  [OverflowState](./use-overflow-state.overflowstate.md) | useOverflowState hook return value |
-|  [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md) | useOverflowState hook arguments |
+<table><thead><tr><th>
 
-## Variables
+Interface
 
-|  Variable | Description |
-|  --- | --- |
-|  [useOverflowState](./use-overflow-state.useoverflowstate.md) | Hook that returns the overflow state of the provided scrollable element (arguments: [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)<!-- -->) |
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[OverflowState](./use-overflow-state.overflowstate.md)
+
+
+</td><td>
+
+useOverflowState hook return value
+
+
+</td></tr>
+<tr><td>
+
+[UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)
+
+
+</td><td>
+
+useOverflowState hook arguments
+
+
+</td></tr>
+</tbody></table>
 

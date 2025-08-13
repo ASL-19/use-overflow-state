@@ -6,7 +6,7 @@
 
 Ref for the scrollable element (must have `overflow-x: auto` or `overflow-x: visible`<!-- -->).
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 scrollableElementRef: RefObject<HTMLElement>;

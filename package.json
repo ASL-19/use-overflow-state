@@ -2,6 +2,7 @@
   "name": "@asl-19/use-overflow-state",
   "version": "0.1.1",
   "description": "Hook that returns the overflow state of the provided scrollable element",
+  "type": "module",
   "author": {
     "name": "Grant Heaslip",
     "email": "grant@asl19.org",
@@ -10,43 +11,60 @@
   "license": "GPL-3.0-or-later",
   "repository": "ASL-19/use-overflow-state",
   "engines": {
-    "node": ">= 12"
+    "node": ">= 22"
   },
   "files": [
     "dist/**/*.js",
-    "types/**/*.d.ts"
+    "dist/**/*.d.ts"
   ],
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "types/use-overflow-state.public.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
   "sideEffects": false,
   "scripts": {
-    "api-extractor:check": "api-extractor run --verbose",
-    "api-extractor:update": "api-extractor run --local --verbose",
-    "api-documenter:update": "api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
-    "build": "tsc -p tsconfig-cjs.json && tsc -p tsconfig-esm.json",
-    "build-and-update-api": "yarn build && yarn api-extractor:update && yarn api-documenter:update",
-    "eslint": "eslint . --ext js,ts",
-    "prepublishOnly": "yarn build"
+    "api-extractor-check": "api-extractor run --local --verbose",
+    "api-extractor-update": "api-extractor run --local --verbose && api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
+    "build-lint-test": "npm-run-all -l -p  tsc -s lint-test",
+    "rm-dist": "rm -rf dist",
+    "dev": "npm-run-all -l -s package-changed -p tsc-watch",
+    "dev-lint-test": "run-s package-changed lint-test",
+    "eslint-check": "eslint . --ext='js,ts,tsx'",
+    "eslint-fix": "eslint . --ext='js,ts,tsx' --fix",
+    "lint-test": "run-p -l api-extractor-check prettier-check tsc-check",
+    "package-changed": "package-changed",
+    "prepublishOnly": "run-s rm-dist build-lint-test",
+    "prettier-check": "prettier --config prettier.config.js --check .",
+    "prettier-fix": "prettier --config prettier.config.js --write .",
+    "npm-check-updates": "npm-check-updates",
+    "tsc": "tsc --project tsconfig-esm.json",
+    "tsc-watch": "tsc --project tsconfig-esm.json --watch",
+    "tsc-check": "tsc --noEmit"
   },
   "dependencies": {
-    "detect-passive-events": "^2.0.1",
+    "detect-passive-events": "^2.0.3",
     "normalize-scroll-left": "^0.2.1"
   },
   "devDependencies": {
-    "@asl-19/eslint-config": "^0.3.0",
-    "@microsoft/api-documenter": "^7.9.26",
-    "@microsoft/api-extractor": "^7.11.2",
-    "@types/react": "^16.9.56",
-    "@types/react-dom": "^16.9.9",
-    "eslint": "^7.13.0",
-    "prettier": "^2.1.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "typescript": "^4.0.5"
+    "@asl-19/eslint-config": "^0.9.0",
+    "@asl-19/shared-package-configs": "^0.3.0",
+    "@microsoft/api-documenter": "^7.26.31",
+    "@microsoft/api-extractor": "^7.52.10",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.33.0",
+    "npm-run-all": "^4.1.5",
+    "package-changed": "^3.0.0",
+    "prettier": "^3.6.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2"
   },
   "peerDependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
+  },
+  "overrides": {
+    "@arthurgeron/eslint-plugin-react-usememo": "2.4.4"
   }
 }

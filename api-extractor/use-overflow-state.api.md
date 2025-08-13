@@ -15,7 +15,6 @@ export interface OverflowState {
 
 // @public
 const useOverflowState: ({ scrollableElementRef, wrapperElementRef, }: UseOverflowStateArgs) => OverflowState;
-
 export default useOverflowState;
 
 // @public
@@ -23,7 +22,6 @@ export interface UseOverflowStateArgs {
     scrollableElementRef: RefObject<HTMLElement>;
     wrapperElementRef: RefObject<HTMLElement> | undefined;
 }
-
 
 // (No @packageDocumentation comment for this package)
 

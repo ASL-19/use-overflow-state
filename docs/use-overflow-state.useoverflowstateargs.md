@@ -6,7 +6,7 @@
 
 useOverflowState hook arguments
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface UseOverflowStateArgs 
@@ -14,8 +14,64 @@ export interface UseOverflowStateArgs
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [scrollableElementRef](./use-overflow-state.useoverflowstateargs.scrollableelementref.md) | RefObject&lt;HTMLElement&gt; | Ref for the scrollable element (must have <code>overflow-x: auto</code> or <code>overflow-x: visible</code>). |
-|  [wrapperElementRef](./use-overflow-state.useoverflowstateargs.wrapperelementref.md) | RefObject&lt;HTMLElement&gt; \| undefined | Ref for the wrapper element (used to determine if scroll bar is inset). |
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[scrollableElementRef](./use-overflow-state.useoverflowstateargs.scrollableelementref.md)
+
+
+</td><td>
+
+
+</td><td>
+
+RefObject&lt;HTMLElement&gt;
+
+
+</td><td>
+
+Ref for the scrollable element (must have `overflow-x: auto` or `overflow-x: visible`<!-- -->).
+
+
+</td></tr>
+<tr><td>
+
+[wrapperElementRef](./use-overflow-state.useoverflowstateargs.wrapperelementref.md)
+
+
+</td><td>
+
+
+</td><td>
+
+RefObject&lt;HTMLElement&gt; \| undefined
+
+
+</td><td>
+
+Ref for the wrapper element (used to determine if scroll bar is inset).
+
+
+</td></tr>
+</tbody></table>
 

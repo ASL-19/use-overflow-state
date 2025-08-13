@@ -6,7 +6,7 @@
 
 Ref for the wrapper element (used to determine if scroll bar is inset).
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 wrapperElementRef: RefObject<HTMLElement> | undefined;
