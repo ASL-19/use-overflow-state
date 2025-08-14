@@ -1,9 +1,11 @@
 {
   "cSpell.words": [
     "Heaslip",
+    "packagehash",
     "scrollable",
     "tsdoc",
-    "unscoped"
+    "unscoped",
+    "yalc"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
