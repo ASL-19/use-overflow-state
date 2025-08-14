@@ -7,7 +7,7 @@ const typedAsl19 = /** @type {import("@asl-19/eslint-config")["default"]} */ (
 
 const eslintConfig = defineConfig([
   {
-    ignores: ["dist/", "types/", ".yalc/"],
+    ignores: ["dist/", ".yalc/"],
   },
   {
     extends: [

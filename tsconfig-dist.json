@@ -1,5 +1,5 @@
 {
-  "extends": "@asl-19/shared-package-configs/tsconfig-esm.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "moduleResolution": "Bundler"

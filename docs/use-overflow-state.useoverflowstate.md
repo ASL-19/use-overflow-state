@@ -9,10 +9,7 @@ Hook that returns the overflow state of the provided scrollable element (argumen
 **Signature:**
 
 ```typescript
-useOverflowState: ({
-  scrollableElementRef,
-  wrapperElementRef,
-}: UseOverflowStateArgs) => OverflowState;
+useOverflowState: ({ roundingErrorTolerance, scrollableElementRef, wrapperElementRef, }: UseOverflowStateArgs) => OverflowState
 ```
 
 ## Parameters
@@ -21,24 +18,30 @@ useOverflowState: ({
 
 Parameter
 
+
 </th><th>
 
 Type
+
 
 </th><th>
 
 Description
 
+
 </th></tr></thead>
 <tbody><tr><td>
 
-{ scrollableElementRef, wrapperElementRef, }
+{ roundingErrorTolerance, scrollableElementRef, wrapperElementRef, }
+
 
 </td><td>
 
 [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)
 
+
 </td><td>
+
 
 </td></tr>
 </tbody></table>
@@ -46,3 +49,4 @@ Description
 **Returns:**
 
 [OverflowState](./use-overflow-state.overflowstate.md)
+

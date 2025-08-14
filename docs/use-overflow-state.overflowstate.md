@@ -2,78 +2,16 @@
 
 [Home](./index.md) &gt; [@asl-19/use-overflow-state](./use-overflow-state.md) &gt; [OverflowState](./use-overflow-state.overflowstate.md)
 
-## OverflowState interface
+## OverflowState type
 
 useOverflowState hook return value
 
 **Signature:**
 
 ```typescript
-export interface OverflowState
+export type OverflowState = {
+    horizontalScrollBarHasGutter: boolean;
+    leftHasOverflow: boolean;
+    rightHasOverflow: boolean;
+};
 ```
-
-## Properties
-
-<table><thead><tr><th>
-
-Property
-
-</th><th>
-
-Modifiers
-
-</th><th>
-
-Type
-
-</th><th>
-
-Description
-
-</th></tr></thead>
-<tbody><tr><td>
-
-[horizontalScrollBarHasGutter](./use-overflow-state.overflowstate.horizontalscrollbarhasgutter.md)
-
-</td><td>
-
-</td><td>
-
-boolean
-
-</td><td>
-
-Does the horizontal scroll bar have a gutter (reserved space)?
-
-</td></tr>
-<tr><td>
-
-[leftHasOverflow](./use-overflow-state.overflowstate.lefthasoverflow.md)
-
-</td><td>
-
-</td><td>
-
-boolean
-
-</td><td>
-
-Is there overflow on the left side?
-
-</td></tr>
-<tr><td>
-
-[rightHasOverflow](./use-overflow-state.overflowstate.righthasoverflow.md)
-
-</td><td>
-
-</td><td>
-
-boolean
-
-</td><td>
-
-Is there overflow on the right side?
-
-</td></tr>
-</tbody></table>

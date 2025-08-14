@@ -190,7 +190,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "src/index.ts",
+          "fileUrlPath": "dist/index.d.ts",
           "releaseTag": "Public",
           "name": "OverflowState",
           "typeTokenRange": {
@@ -222,7 +222,7 @@
               "canonicalReference": "@asl-19/use-overflow-state!OverflowState:type"
             }
           ],
-          "fileUrlPath": "src/index.ts",
+          "fileUrlPath": "dist/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -295,7 +295,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "src/index.ts",
+          "fileUrlPath": "dist/index.d.ts",
           "releaseTag": "Public",
           "name": "UseOverflowStateArgs",
           "typeTokenRange": {

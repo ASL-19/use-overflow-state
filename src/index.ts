@@ -142,7 +142,6 @@ const useOverflowState = ({
 
       if (
         overflowStateKeys.some(
-          // eslint-disable-next-line security/detect-object-injection
           (key) => overflowState[key] !== newOverflowState[key],
         )
       ) {
