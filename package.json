@@ -1,15 +1,25 @@
 {
   "name": "@asl-19/use-overflow-state",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Hook that returns the overflow state of the provided scrollable element",
   "type": "module",
-  "author": {
-    "name": "Grant Heaslip",
-    "email": "grant@asl19.org",
-    "url": "https://asl19.org/"
-  },
+  "contributors": [
+    {
+      "name": "Grant Heaslip",
+      "email": "grant@asl19.org",
+      "url": "https://asl19.org/"
+    },
+    {
+      "name": "Min Van",
+      "email": "min@asl19.org",
+      "url": "https://asl19.org/"
+    }
+  ],
   "license": "GPL-3.0-or-later",
-  "repository": "ASL-19/use-overflow-state",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASL-19/use-overflow-state.git"
+  },
   "engines": {
     "node": ">= 18"
   },
@@ -32,7 +42,7 @@
     "dev-lint-test": "run-s package-changed lint-test",
     "eslint-check": "eslint . --ext='js,ts,tsx'",
     "eslint-fix": "eslint . --ext='js,ts,tsx' --fix",
-    "lint-test": "run-p -l api-extractor-check prettier-check tsc-check",
+    "lint-test": "run-p -l api-extractor-check eslint-check prettier-check tsc-check",
     "package-changed": "package-changed",
     "prepublishOnly": "run-s rm-dist build-lint-test",
     "prettier-check": "prettier --config --check .",
@@ -61,10 +71,7 @@
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
-  },
-  "overrides": {
-    "@arthurgeron/eslint-plugin-react-usememo": "2.4.4"
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
   }
 }
