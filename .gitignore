@@ -1,5 +1,5 @@
-.yalc
-yalc.lock
+.yalc/
+.packagehash
 dist/
 node_modules/
 package/
