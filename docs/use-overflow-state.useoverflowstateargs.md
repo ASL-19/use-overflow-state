@@ -2,20 +2,16 @@
 
 [Home](./index.md) &gt; [@asl-19/use-overflow-state](./use-overflow-state.md) &gt; [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)
 
-## UseOverflowStateArgs interface
+## UseOverflowStateArgs type
 
 useOverflowState hook arguments
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export interface UseOverflowStateArgs 
+export type UseOverflowStateArgs = {
+    roundingErrorTolerance?: number;
+    scrollableElementRef: RefObject<HTMLElement | null>;
+    wrapperElementRef: RefObject<HTMLElement | null>;
+};
 ```
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [scrollableElementRef](./use-overflow-state.useoverflowstateargs.scrollableelementref.md) | RefObject&lt;HTMLElement&gt; | Ref for the scrollable element (must have <code>overflow-x: auto</code> or <code>overflow-x: visible</code>). |
-|  [wrapperElementRef](./use-overflow-state.useoverflowstateargs.wrapperelementref.md) | RefObject&lt;HTMLElement&gt; \| undefined | Ref for the wrapper element (used to determine if scroll bar is inset). |
-

@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
     "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "noImplicitAny": true,
-    "outDir": "dist/cjs",
-    "target": "ES5"
+    "incremental": true,
+    "module": "preserve",
+    "outDir": "dist",
+    "strict": true,
+    "target": "es2021"
   },
   "include": [
-    "src/**/*",
-    "*.js"
-  ],
+    "*.js",
+    "*.mjs",
+    "*.ts",
+    "src/**/*.ts*"
+  ]
 }

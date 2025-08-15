@@ -4,16 +4,66 @@
 
 ## use-overflow-state package
 
-## Interfaces
+## Functions
 
-|  Interface | Description |
-|  --- | --- |
-|  [OverflowState](./use-overflow-state.overflowstate.md) | useOverflowState hook return value |
-|  [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md) | useOverflowState hook arguments |
+<table><thead><tr><th>
 
-## Variables
+Function
 
-|  Variable | Description |
-|  --- | --- |
-|  [useOverflowState](./use-overflow-state.useoverflowstate.md) | Hook that returns the overflow state of the provided scrollable element (arguments: [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)<!-- -->) |
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[useOverflowState({ roundingErrorTolerance, scrollableElementRef, wrapperElementRef, })](./use-overflow-state.useoverflowstate.md)
+
+
+</td><td>
+
+Hook that returns the overflow state of the provided scrollable element (arguments: [UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)<!-- -->)
+
+
+</td></tr>
+</tbody></table>
+
+## Type Aliases
+
+<table><thead><tr><th>
+
+Type Alias
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[OverflowState](./use-overflow-state.overflowstate.md)
+
+
+</td><td>
+
+useOverflowState hook return value
+
+
+</td></tr>
+<tr><td>
+
+[UseOverflowStateArgs](./use-overflow-state.useoverflowstateargs.md)
+
+
+</td><td>
+
+useOverflowState hook arguments
+
+
+</td></tr>
+</tbody></table>
 
