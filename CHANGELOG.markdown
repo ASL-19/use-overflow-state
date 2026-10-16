@@ -1,6 +1,6 @@
 # @asl-19/use-overflow-state changelog
 
-## Unreleased
+## 1.1.0 [2026-10-16]
 
 - Clear the pending throttled update on unmount, so the hook no longer reads the scrollable element or updates state after the component unmounts
 - Narrow `react` and `react-dom` peer dependency ranges from `>=19.0.0` to `^19.0.0`
