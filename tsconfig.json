@@ -3,11 +3,15 @@
     "allowJs": true,
     "checkJs": true,
     "declaration": true,
-    "incremental": true,
-    "module": "preserve",
+    "module": "nodenext",
     "outDir": "dist",
+    "rootDir": ".",
+    "skipLibCheck": true,
     "strict": true,
-    "target": "es2021"
+    "target": "es2022",
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "*.js",

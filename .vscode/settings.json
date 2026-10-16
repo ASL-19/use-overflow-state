@@ -1,9 +1,12 @@
 {
   "cSpell.words": [
-    "Heaslip",
-    "packagehash",
+    "attw",
+    "EBADDEVENGINES",
+    "heaslip",
+    "pinact",
     "scrollable",
     "tsdoc",
+    "typedoc",
     "unscoped",
     "yalc"
   ],
@@ -15,19 +18,33 @@
     "javascript",
     "typescript"
   ],
-  "files.associations": {
-    "api-extractor.json": "jsonc"
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "’": true,
+    "۱": true,
+    "۰": true,
+    "۵": true,
+    "۷": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "redhat.telemetry.enabled": false,
+  "rewrap.reformat": true,
+  "rewrap.wrappingColumn": 80,
+  "[javascript][json][jsonc][markdown][typescript][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "search.exclude": {
-    ".yarn/releases/**/*": true,
-    ".yarnrc": true,
-    "api-extractor/**/*": true,
     "CHANGELOG": true,
     "docs/**/*": true,
     "LICENSE": true,
-    "types/**/*": true,
-    "package-lock.json": true,
-    "yarn.lock": true
+    "package-lock.json": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "testing.openTesting": "neverOpen",
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true
 }

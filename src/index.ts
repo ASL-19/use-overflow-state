@@ -1,3 +1,9 @@
+/**
+ * Hook that returns the overflow state of the provided scrollable element.
+ *
+ * @packageDocumentation
+ */
+
 import { supportsPassiveEvents } from "detect-passive-events";
 import { getNormalizedScrollLeft } from "normalize-scroll-left";
 import { RefObject, useEffect, useRef, useState } from "react";
@@ -85,7 +91,9 @@ const scrollPositionUpdateFrequency = 125;
 
 /**
  * Hook that returns the overflow state of the provided scrollable element
- * (arguments: {@link UseOverflowStateArgs})
+ *
+ * @param args - Hook arguments
+ * @returns The scrollable element’s overflow state
  *
  * @public
  */
@@ -124,7 +132,7 @@ const useOverflowState = ({
       const leftHasOverflow = normalizedScrollLeft > roundingErrorTolerance;
 
       const rightHasOverflow =
-        // Math.ceil necessary because scrollLeft can be a decimal
+        // roundingErrorTolerance necessary because scrollLeft can be a decimal
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
         normalizedScrollLeft +
           scrollableElement.offsetWidth +
@@ -197,6 +205,8 @@ const useOverflowState = ({
       }
 
       window.removeEventListener("resize", debouncedUpdateOverflowState, false);
+
+      window.clearTimeout(updateScrollStateTimeoutIdRef.current);
     };
   }, [
     overflowState,
