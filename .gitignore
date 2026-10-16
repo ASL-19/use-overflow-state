@@ -1,6 +1,5 @@
+.DS_Store
 .yalc/
-.packagehash
 dist/
 node_modules/
-package/
-temp/
+yalc.lock

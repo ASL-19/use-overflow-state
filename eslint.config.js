@@ -2,9 +2,7 @@ import asl19 from "@asl-19/eslint-config";
 import { defineConfig } from "eslint/config";
 
 const eslintConfig = defineConfig([
-  {
-    ignores: ["dist/", ".yalc/"],
-  },
+  { ignores: ["dist/", ".yalc/"] },
   {
     extends: [
       asl19.base, // (for all projects)
